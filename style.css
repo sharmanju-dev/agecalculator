@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color:#547792 ;
+    color: white;
+}
+
+
+h2{
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.age{
+    text-align: center;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+}
+
+#birthYear {
+    height: 40px;
+    width: 170px;
+    margin-right: 10px;
+    margin-left: 10px;
+    align-items: center;
+    border: 2px solid black;
+   
+    
+    
+}
+
+label {
+    text-align: center;
+    margin-top: 6px;
+    font-size: 25px;
+}
+
+#calculate {
+    height: 40px;
+    width: 120px;
+    background-color: #94B4C1;
+    color: white;
+}
+
+input:hover, button:hover {
+    cursor: pointer;
+}
