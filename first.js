@@ -1,23 +1,46 @@
+// setTimeout(() => {
+//     console.log("hello world");
+// }, 2000);
 
-// let arr = [ 1 ,2 ,3 ,40];
+// setInterval(() =>{
+//     const now = new Date();
+//     console.log(now.toLocaleTimeString());
+// },1000
+// );
 
-// // let square = arr.map(par=> par*par);
-// // console.log(square);
 
-// let evens=arr.filter(function(num) {
-//     return num%2==0;
-// });
+// const myPromise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Resolved after 3 seconds!");
+//     }, 3000);
+//   });
+  
+//   myPromise.then((message) => {
+//     console.log(message);
+//   });
+ 
 
-// console.log(evens)
+// const form = document.getElementById("myForm");
+// const output = document.getElementById("output");
 
-// let numbers = [2, 4, 6, 8, 3, 7];
+//   form.addEventListener("submit", function(event) {
+//     event.preventDefault(); // prevent page reload
+//     const name = document.getElementById("username").value;
+//     output.textContent = "You entered: " + name;
+//   });
 
-// let result = numbers.filter(function(num) {
-//   if (num %2== 0) {
-//     return true;  // keep this number
-//   } else {
-//    return false;
-//   }
-// });
+function delayPromise() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Done waiting!");
+    }, 2000);
+  });
+}
 
-// console.log(result);
+async function callAsync() {
+  console.log("Waiting...");
+  const result=await delayPromise();
+  console.log(result);
+}
+
+callAsync();
